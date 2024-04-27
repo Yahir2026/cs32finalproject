@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block head %}
+ <title>Anonymous Schooling Confessions</title>
+{% endblock %}
+
+{% block body %}
+
+<div class="name">
+ 
+   <!-- displays a heading at top-->
+    <h1 style="text-align: center">Update Pseudonym</h1>
+
+    <div class="form">
+      <!-- form data to be submitted and updated using POST method-->
+        <form action="/update/{{sub.id}}" method="POST">
+          <!-- text field where user can update name-->
+            <input type="text" name="name" id="name" value="{{sub.name}}">
+            <textarea name="comments" id="comments" rows = "4" cols="50">{{sub.comments}}</textarea>
+            
+            <input type="submit" value="Update">
+        </form>
+      </div>
+    </div>
+{% endblock %}
+    

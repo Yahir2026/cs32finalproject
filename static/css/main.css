@@ -1,0 +1,112 @@
+body, html {
+  margin: 0;
+  font-family: 'Courier New', monospace;
+  background-color: #4a4141;
+}
+
+.name {
+    margin: 0 auto;
+    width: 400px;
+}
+
+table, td, th {
+    border: 2px solid black;
+    
+}
+
+table {
+    border-collapse: collapse;
+    width: 150%;
+    table-layout: fixed;
+    background-color: white;
+}
+
+th {
+    height: 30px;
+}
+
+td {
+  text-align: center;
+  padding: 5px;
+}
+
+textarea {
+  width: 100%;
+  height: auto;
+  min-height: 50px;
+}
+
+th, td {
+  word-wrap: break-word;
+  max-width: 200px;
+  vertical-align: top;
+}
+
+.form {
+    margin-top: 20px;
+}
+
+#name {
+    width: 70%;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+nav ul li {
+  float: left;
+}
+
+nav ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: #111;
+}
+
+.header {
+  text-align: center; /* This will center the text or inline elements inside the header */
+  margin-bottom: 20px; /* Adds some space between the header and the navbar */
+  background-color: #333; /* Optional: To match your navbar background */
+}
+
+.header-logo {
+  display: block; /* Makes it a block-level element */
+  margin: 0 auto; /* Centers the block-level element */
+  width: 150px; /* Adjust width as needed */
+  height: auto; /* Keeps the aspect ratio of the image */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  background-color: #333;
+  text-align: center; /* Ensures the list items are centered if under each other */
+  margin: 0; /* Removes default margin */
+}
+
+nav ul li {
+  display: inline; /* Displays the list items in a line */
+  margin-right: 10px; /* Adds space between the items */
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  background-color: #333;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+}

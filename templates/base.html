@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- meta used to calibrate screen and text for any device--> >
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- link base.html to the main.css-->
+  <link rel = "stylesheet" href="{{ url_for('static', filename='css/main.css') }}" >
+  <!-- our block here contains the header portion used for every other html file-->
+  {% block head %}
+  
+  {% endblock %}
+  <title>Document</title>
+</head>
+<body>
+  <!-- same idea here but it is empty because we will add to the body in the other files-->
+  <img src="{{ url_for('static', filename='images/misamerica.webp') }}" alt="Logo" class="header-logo">
+  <nav>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/index">Confess Your Truth</a></li>
+        <li><a href="/about">About Us</a></li>
+        <!-- Add additional links as needed -->
+    </ul>
+  </nav>
+    {% block body %}{% endblock %} 
+</body>
+</html>

@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block head %}
+ <title>Exposing Schools Anonymously</title>
+ 
+{% endblock %}
+
+{% block body %}
+<!-- have class="name" to signifiy our main name in the page-->
+<div class="name">
+    <h1 style="text-align: center">Exposing Your School's Secrets</h1>
+    <!-- if statement checking for condition of zero in list. In this case when there is nothing, we output the folowing text "Say your truth"-->
+    {% if subs|length < 1 %}
+    
+    <h4 style="text-align: center">Say your truth!</h4>
+    {% else %}
+    
+    <!-- our beautiful table that contains all of our output-->
+    <table>
+      <tr>
+        <!-- all of the sections of our table -->
+          <th>Anonymous Pseudonym</th>
+          <th>Submission</th>
+          <th>Date Submitted</th>
+          <th>Actions</th>
+      </tr>
+      <!-- for each sub in subs -->
+      {% for sub in subs %}
+          <tr>
+            <!-- displays name of submission-->
+              <td>{{ sub.name }}</td>
+              <td>{{ sub.comments }}</td>
+              <!-- shows data of submission-->
+              <td>{{ sub.date_created.date() }}</td>
+              <td>
+                <!-- provides way to delete submission referencing delete function-->
+                  <a href ="/delete/{{sub.id}}">Delete</a>
+                  <!-- simple break between two links-->
+                  <br>
+                  <!-- provides way to update submission referencing update function-->
+                  <a href ="/update/{{sub.id}}">Update</a>
+              </td>
+            </tr>
+          {% endfor %}
+    </table>
+    {% endif %}
+  <div class="form">
+    <!-- defines form for adding new name-->
+    <form action="/index" method="POST">
+      <!--imput type where users can input new name with text field-->
+        <input type="text" name="name" id="name" placeholder="Enter Pseudonym">
+        <textarea name="comments" id="comments" placeholder="Add Confession" rows="4" cols="50"></textarea>
+        <!-- submit form when done-->
+        <input type="submit" value="Add Submission">
+    </form>
+  </div>
+  </div>
+{% endblock %}
+    
