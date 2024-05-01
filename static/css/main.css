@@ -1,7 +1,7 @@
 body, html {
   margin: 0;
   font-family: 'Courier New', monospace;
-  background-color: #4a4141;
+  background-color: #498c99;
 }
 
 .name {
@@ -77,7 +77,7 @@ nav ul li a:hover {
 .header {
   text-align: center; /* This will center the text or inline elements inside the header */
   margin-bottom: 20px; /* Adds some space between the header and the navbar */
-  background-color: #333; /* Optional: To match your navbar background */
+  background-color: #333; /* Optional: To match navbar background */
 }
 
 .header-logo {

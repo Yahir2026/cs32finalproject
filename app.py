@@ -2,6 +2,7 @@ from flask import Flask, render_template, url_for, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 from flask_migrate import Migrate
+import data_processing 
 
 
 app = Flask(__name__)
@@ -30,15 +31,25 @@ with app.app_context():
     db.create_all()
 
 # Set 'home.html' as the new root homepage
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def home():
+    if request.method == 'POST':
+        leaid = request.form['leaid']
+        enrollment_data, district_totals_data, district_percentages_data = data_processing.load_data(leaid)
+        ap_enrollment_data, district_ap_totals_data = data_processing.load_ap_data(leaid, district_totals_data)
+        suspension_data, district_suspension_totals_data = data_processing.load_suspension_data(leaid, district_totals_data)
+        return render_template('results.html', enrollment_data=enrollment_data, ap_data=ap_enrollment_data, suspension_data=suspension_data)
     return render_template('home.html')
 
+    
+    
 @app.route('/about')
 def about():
     return render_template('about.html')
 # post and get methods refer to the HTTP methods used to send and receive data from a web server
-
+@app.route('/sources')
+def sources():
+    return render_template('sources.html')
 # methods POST and GET can be handled by the index function
 @app.route('/index', methods=['POST', 'GET'])
 def index():

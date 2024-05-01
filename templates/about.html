@@ -1,17 +1,69 @@
 {% extends "base.html" %}
 
 {% block head %}
- <title>Anonymous Schooling Confessions</title>
+
+ <link rel="stylesheet" href="{{ url_for ('static', filename='css/biography.css')}}">
 {% endblock %}
 
 {% block body %}
-<header class="header">
-  
+<!-- Site Header -->
+<header>
+  <!-- h1: The most important headline (only one allowed per page by W3C standards) -->
+  <h1>Student Profile Page</h1>
 </header>
-<!-- Rest of the page content -->
-<div class="content">
-  <!-- Content goes here -->
-  <h1 style="text-align: center; color:white; font-family: 'Courier New', monospace">About Us!</h1>
-</div>
 
+<div class="container">
+  <!-- Section 1: Biography -->
+  <section id="main-bio">
+    <!-- h2: Tier-2 Headline (Not as important as the h1 header, but more than one allowed). -->
+    <h2>Yahir Ramirez</h2>
+
+    <!-- Headshot image -->
+    <img id = "bio-image" src="static/images/profilepic.jpg" alt="picture">
+
+    <!-- Paragraph with embedded link -->
+    <h3>Government/Statistics</h3>
+    <p>
+      Yahir Ramirez is a sophomore living in Lowell House. As a native of Vermont, Yahir loves to spend time running and appreciating the clean air! Yahir is most proud of his work on campus with the Safra Center of Ethic's Intercollegiate Civil Disagreement Partnership. As a senior researcher, he is actively trying to find ways to engage people of all political backgrounds. 
+    </p>
+  </section>
+
+  <!-- Section 2: Contact Information -->
+  <section id="contact-info">
+
+    <h2>Contact Information</h2>
+    
+    <ul>
+      <li><strong>Email:</strong> <a href="mailto:yramirez@college.harvard.edu">yramirez@college.harvard.edu</a></li>
+      <li><strong>Github:</strong> <a href="https://github.com/Yahir2026">https://github.com/Yahir2026</a></li>
+      <li><strong>Portfolio:</strong> <a href="#">Coming Soon!</a></li>
+    </ul>
+
+  </section>
+
+  <section id="main-bio">
+    <!-- h2: Tier-2 Headline (Not as important as the h1 header, but more than one allowed). -->
+    <h2>Abby Yoon</h2>
+
+    <!-- Headshot image -->
+    <img id = "bio-image" src="static/images/personal headshoort.PNG" alt="picture">
+
+    <!-- Paragraph with embedded link -->
+    <h3>Biomedical Engineering</h3>
+    <p>
+      Abby Yoon is a student at Harvard University passionate about racial justice and education equity.
+    </p>
+  </section>
+
+  <!-- Section 2: Contact Information -->
+  <section id="contact-info">
+
+    <h2>Contact Information</h2>
+    
+    <ul>
+      <li><strong>Email:</strong> <a href="mailto:abbyyoon@college.harvard.edu">abbyyoon@college.harvard.edu</a></li>
+      <li><strong>Portfolio:</strong> <a href="muse.io/abbyyoon">muse.io/abbyyoon</a></li>
+    </ul>
+
+  </section>
 {% endblock %}

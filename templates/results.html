@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results</title>
+</head>
+<body>
+    <h1>Enrollment Data</h1>
+    {% for key, value in enrollment_data.items() %}
+        <p>{{ key }}: {{ value }}</p>
+    {% endfor %}
+    <h1>AP Enrollment Data</h1>
+    {% for key, value in ap_data.items() %}
+        <p>{{ key }}: {{ value }}</p>
+    {% endfor %}
+    <h1>Suspension Data</h1>
+    {% for key, value in suspension_data.items() %}
+        <p>{{ key }}: {{ value }}</p>
+    {% endfor %}
+</body>
+</html>
