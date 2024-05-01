@@ -17,8 +17,9 @@ In Replit:
 WRITTEN EXPLANATIONS FOR WEBSITE
 
 5. THEN DOWNLOAD FILES FROM GITHUB
+6. You don't have to download the csv files since the search bar is not functional although we attempted to make it functional!
 
-6. ONCE EVERYTHING IS DOWNLOADED, RUN “python app.py”
+7. ONCE EVERYTHING IS DOWNLOADED, RUN “python app.py”
 
-7. You will see the website
+8. You will see the website
 
